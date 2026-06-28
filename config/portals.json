@@ -1,0 +1,14 @@
+{
+  "portals": [
+    { "id": "chatgpt",        "name": "ChatGPT",        "category": "chat",     "color": "#0E8C6A", "home": "https://chatgpt.com/" },
+    { "id": "claude",         "name": "Claude",         "category": "chat",     "color": "#C2410C", "home": "https://claude.ai/" },
+    { "id": "gemini",         "name": "Gemini",         "category": "chat",     "color": "#1A56DB", "home": "https://gemini.google.com/" },
+    { "id": "perplexity",     "name": "Perplexity",     "category": "research", "color": "#0E7C8B", "home": "https://www.perplexity.ai/" },
+    { "id": "grok",           "name": "Grok",           "category": "chat",     "color": "#1F2937", "home": "https://grok.com/" },
+    { "id": "github-copilot", "name": "GitHub Copilot", "category": "code",     "color": "#6D28D9", "home": "https://github.com/copilot" },
+    { "id": "claude-code",    "name": "Claude Code",    "category": "code",     "color": "#9A3412", "home": "https://www.anthropic.com/claude-code" },
+    { "id": "cursor",         "name": "Cursor",         "category": "code",     "color": "#4338CA", "home": "https://cursor.com/" },
+    { "id": "github",         "name": "GitHub",         "category": "code",     "color": "#24292E", "home": "https://github.com/" },
+    { "id": "notes",          "name": "Notes",          "category": "notes",    "color": "#B45309", "home": "" }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "views": [
+    {
+      "id": "interesting-again",
+      "label": "Became interesting again",
+      "emoji": "🔥",
+      "blurb": "You drifted away — then something pulled you back.",
+      "mode": "signal",
+      "signal": "interestingAgain"
+    },
+    {
+      "id": "left-unfinished",
+      "label": "Left unfinished",
+      "emoji": "🧠",
+      "blurb": "You left an interesting question unanswered.",
+      "mode": "signal",
+      "signal": "unfinished"
+    },
+    {
+      "id": "ready-to-build",
+      "label": "Ready to build",
+      "emoji": "🚀",
+      "blurb": "Thinking is converging into something you could make.",
+      "mode": "signal",
+      "signal": "readyToBuild"
+    },
+    {
+      "id": "new-curiosities",
+      "label": "New curiosities",
+      "emoji": "🌱",
+      "blurb": "Freshly captured. Still mostly potential.",
+      "mode": "new"
+    },
+    {
+      "id": "building-momentum",
+      "label": "Building momentum",
+      "emoji": "📈",
+      "blurb": "Moving quickly right now.",
+      "mode": "momentum"
+    },
+    {
+      "id": "recently-discovered",
+      "label": "Recently discovered",
+      "emoji": "✨",
+      "blurb": "You learned something here lately.",
+      "mode": "recent"
+    },
+    {
+      "id": "surprise-me",
+      "label": "Surprise me",
+      "emoji": "🎲",
+      "blurb": "A door you forgot was here.",
+      "mode": "random"
+    }
+  ]
+}

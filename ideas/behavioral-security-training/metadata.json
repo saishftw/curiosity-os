@@ -1,0 +1,11 @@
+{
+  "momentum": 0.35,
+  "interest": 0.82,
+  "confidence": 0.4,
+  "novelty": 0.65,
+  "evidence": 0.45,
+  "activity": "paused",
+  "lastActive": "2026-06-21",
+  "counts": { "sessions": 4, "publishes": 4, "connections": 5, "openLoops": 3 },
+  "signals": { "interestingAgain": true, "unfinished": true, "readyToBuild": false }
+}

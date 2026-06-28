@@ -1,0 +1,9 @@
+{
+  "activities": [
+    { "id": "exploring",   "name": "Exploring",   "glyph": "◇" },
+    { "id": "building",    "name": "Building",    "glyph": "▲" },
+    { "id": "observing",   "name": "Observing",   "glyph": "◠" },
+    { "id": "paused",      "name": "Paused",      "glyph": "❚❚" },
+    { "id": "researching", "name": "Researching", "glyph": "◷" }
+  ]
+}

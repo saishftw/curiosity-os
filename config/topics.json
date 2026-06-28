@@ -1,0 +1,14 @@
+{
+  "topics": [
+    { "id": "ai",            "name": "AI" },
+    { "id": "psychology",    "name": "Psychology" },
+    { "id": "productivity",  "name": "Productivity" },
+    { "id": "cybersecurity", "name": "Cybersecurity" },
+    { "id": "startups",      "name": "Startups" },
+    { "id": "design",        "name": "Design" },
+    { "id": "health",        "name": "Health" },
+    { "id": "learning",      "name": "Learning" },
+    { "id": "systems",       "name": "Systems" },
+    { "id": "business",      "name": "Business" }
+  ]
+}

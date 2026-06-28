@@ -1,0 +1,9 @@
+{
+  "connections": [
+    {
+      "to": "passive-life-analytics",
+      "relation": "Both act in the moment it matters — a risky click in one, a daily signal in the other — not after the fact.",
+      "concepts": ["moment of action", "behavior over knowledge"]
+    }
+  ]
+}

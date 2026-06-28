@@ -1,0 +1,11 @@
+{
+  "momentum": 0.1,
+  "interest": 0.6,
+  "confidence": 0.2,
+  "novelty": 0.9,
+  "evidence": 0.0,
+  "activity": "exploring",
+  "lastActive": "{{created}}",
+  "counts": { "sessions": 0, "publishes": 0, "connections": 0, "openLoops": 0 },
+  "signals": { "interestingAgain": false, "unfinished": false, "readyToBuild": false }
+}

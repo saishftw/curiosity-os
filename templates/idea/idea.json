@@ -1,0 +1,10 @@
+{
+  "id": "{{id}}",
+  "title": "{{title}}",
+  "slug": "{{slug}}",
+  "created": "{{created}}",
+  "topics": [],
+  "status": "captured",
+  "emblem": "spark",
+  "source": "{{source}}"
+}

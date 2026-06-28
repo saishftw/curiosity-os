@@ -1,0 +1,15 @@
+{
+  "metadataTypes": [
+    { "id": "momentum",   "name": "Momentum",   "kind": "scalar", "blurb": "How actively this Idea is evolving right now." },
+    { "id": "interest",   "name": "Interest",   "kind": "scalar", "blurb": "Your current excitement for it." },
+    { "id": "confidence", "name": "Confidence", "kind": "scalar", "blurb": "How certain you feel. Lower can mean deeper understanding." },
+    { "id": "novelty",    "name": "Novelty",    "kind": "scalar", "blurb": "How unexplored it still feels." },
+    { "id": "evidence",   "name": "Evidence",   "kind": "scalar", "blurb": "How much supporting knowledge exists." }
+  ],
+  "counts": [
+    { "id": "sessions",    "name": "Thinking sessions" },
+    { "id": "publishes",   "name": "Publishes" },
+    { "id": "connections", "name": "Connections" },
+    { "id": "openLoops",   "name": "Open loops" }
+  ]
+}
