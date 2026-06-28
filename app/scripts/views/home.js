@@ -132,7 +132,7 @@ function unexpectedConnections({ ideas, index }, order) {
       el("div", { class: "connection__main" }, [
         el("h3", { class: "connection__title connection__title--pair" }, [
           el("span", { text: pair.from }),
-          el("span", { class: "connection__amp", "aria-hidden": "true", text: "↔" }),
+          el("span", { class: "connection__amp", "aria-hidden": "true", text: "↔\uFE0E" }),
           el("span", { text: titleFor(pair.to) }),
         ]),
         pair.relation &&

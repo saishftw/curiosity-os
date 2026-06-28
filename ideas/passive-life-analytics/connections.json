@@ -4,11 +4,6 @@
       "to": "behavioral-security-training",
       "relation": "Both believe change happens in the moment, and that quiet, well-timed cues beat dashboards.",
       "concepts": ["moment of action", "gentle nudges"]
-    },
-    {
-      "to": "ai-cost-optimizer",
-      "relation": "Both extract meaning from data you already produce instead of asking for more input.",
-      "concepts": ["synthesis over collection", "what already exists"]
     }
   ]
 }
