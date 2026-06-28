@@ -42,9 +42,14 @@ body {
   padding-block: var(--s-5) var(--s-8);
   outline: none;
 }
-/* The Idea page is a full-bleed editorial sheet — flush to the rail and edges. */
+/* The Idea page is a full-bleed editorial sheet — flush to the rail and edges.
+   Home and Library follow suit so they hug the same edges (no centered column). */
 .view:has(.idea) {
   padding-block: 0;
+}
+.view:has(.home),
+.view:has(.browse) {
+  padding-block: 0 var(--s-8);
 }
 
 /* — Side navigation: a bordered editorial rail (matches the reference) ---- */
@@ -220,18 +225,17 @@ body {
   }
   .sidenav__link--publish {
     margin-top: 0;
-    background: transparent;
+    background: var(--ink);
     border: none;
-    color: var(--ink-soft);
+    color: var(--bg);
   }
   .sidenav__link--publish:hover {
-    background: transparent;
     border: none;
     box-shadow: none;
     transform: none;
   }
   .sidenav__link--publish .sidenav__ico {
-    color: var(--accent);
+    color: var(--bg);
   }
 }
 
@@ -361,8 +365,31 @@ body {
 }
 
 /* — Home: masthead --------------------------------------------------------- */
+/* Home & Library fill the view like the Idea page — flush to the edges, with the
+   same content inset (no centered max-width column). The Library header bar
+   breaks out to the full width so it matches the Idea page's editorial bar. */
+.home,
+.browse {
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: var(--s-5);
+}
 .home {
   padding-top: var(--s-2);
+}
+@media (min-width: 48rem) {
+  .home,
+  .browse {
+    padding-inline: 2.5rem;
+  }
+}
+.browse .pagebar {
+  margin-inline: calc(-1 * var(--s-5));
+}
+@media (min-width: 48rem) {
+  .browse .pagebar {
+    margin-inline: -2.5rem;
+  }
 }
 .masthead {
   padding-block: var(--s-5) var(--s-3);
@@ -700,7 +727,7 @@ body {
 }
 .band__entries {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
   gap: var(--s-4);
 }
 
