@@ -56,7 +56,7 @@ export function portalChip(portal, { href } = {}) {
         title: `Open ${name}`,
         style,
       },
-      [...inner, el("span", { class: "pchip__ext", "aria-hidden": "true", text: "↗\uFE0E" })]
+      [...inner, el("span", { class: "pchip__ext", "aria-hidden": "true", text: "\u2197\uFE0E" })]
     );
   }
   return el("span", { class: "pchip", style }, inner);
