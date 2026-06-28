@@ -123,24 +123,35 @@ summary::-webkit-details-marker {
   color: var(--bg);
 }
 
-/* Crisp newspaper scrollbars. */
-html {
-  scrollbar-width: thin;
-  scrollbar-color: var(--ink) transparent;
-}
+/* Crisp newspaper scrollbars.
+   WebKit/Blink (Chrome, Safari, Edge): a persistent, layout-occupying bar via
+   ::-webkit-scrollbar. We must NOT set the standard `scrollbar-width` here — once
+   that is present, Chromium switches to the thin overlay scrollbar (0 width,
+   auto-hiding on macOS) and ignores ::-webkit-scrollbar entirely. */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--bg);
   border-left: 1px solid var(--line);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--ink);
+  border: 2px solid var(--bg);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
+}
+::-webkit-scrollbar-corner {
+  background: var(--bg);
+}
+/* Firefox has no ::-webkit-scrollbar — give it the standard properties only. */
+@supports not selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ink) var(--bg);
+  }
 }
 
 /* Dynamic numbers never cause layout shift (skill). */

@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Curiosity OS</title>
     <meta name="description" content="A personal operating system for curiosity — capture, resume, connect, and evolve thinking over time." />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#faf6f0" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#17150f" media="(prefers-color-scheme: dark)" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%2316130d'/%3E%3Ctext%20x='16'%20y='23'%20font-size='20'%20text-anchor='middle'%20fill='%23e8a45f'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E"
-    />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f9f9f7" />
+
+    <!-- Installable web app (iPhone / iPad / Android home screen) -->
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icon.svg" />
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+    <meta name="application-name" content="Curiosity OS" />
+    <meta name="apple-mobile-web-app-title" content="Curiosity" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,14 +61,14 @@
           <span class="sidenav__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 6c-1.5-1.2-3.6-2-6-2H4v13h2c2.4 0 4.5.8 6 2 1.5-1.2 3.6-2 6-2h2V4h-2c-2.4 0-4.5.8-6 2z"/><path d="M12 6v13"/></svg></span>
           <span class="sidenav__label">Library</span>
         </a>
-        <a class="sidenav__link sidenav__link--capture" href="#/capture" data-route="capture">
-          <span class="sidenav__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg></span>
-          <span class="sidenav__label">Capture</span>
-        </a>
-        <button class="sidenav__link" type="button" data-action="publish">
+        <button class="sidenav__link sidenav__link--publish" type="button" data-action="publish">
           <span class="sidenav__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4"/><path d="m7.5 8.5 4.5-4.5 4.5 4.5"/><path d="M5 16v3h14v-3"/></svg></span>
           <span class="sidenav__label">Publish</span>
         </button>
+        <a class="sidenav__link" href="#/capture" data-route="capture">
+          <span class="sidenav__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg></span>
+          <span class="sidenav__label">Capture</span>
+        </a>
       </nav>
     </aside>
 

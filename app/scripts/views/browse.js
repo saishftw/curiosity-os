@@ -2,7 +2,7 @@
 // switch flips between feeling, topic, and activity; no lens owns an Idea.
 
 import { el, clear, daysBetween } from "../ui/dom.js";
-import { ideaEntry } from "../ui/card.js";
+import { ideaEntry, pageBar } from "../ui/card.js";
 import { uiIcon } from "../ui/icons.js";
 
 const VIEW_ICONS = {
@@ -26,12 +26,9 @@ export function browseView({ config, index }) {
   const ideas = index.ideas || [];
   const root = el("div", { class: "container--page browse" });
 
+  root.appendChild(pageBar("The Library"));
   root.appendChild(
     el("div", { class: "masthead enter", style: { "--i": 0 } }, [
-      el("a", { class: "backlink", href: "#/" }, [
-        uiIcon("back"),
-        "Home",
-      ]),
       el("h1", { class: "masthead__title", text: "Browse everything" }),
     ])
   );

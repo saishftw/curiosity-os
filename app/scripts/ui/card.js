@@ -6,6 +6,19 @@ import { el } from "./dom.js";
 import { portalMark } from "./portals.js";
 import { uiIcon } from "./icons.js";
 
+// A page header bar that mirrors the Idea page's editorial bar: a bordered
+// back cell (matching .idea__back) merged with a mono edition label, so the
+// back control looks identical across the Library, Capture, and Idea screens.
+export function pageBar(edition, { href = "#/", label = "Home" } = {}) {
+  return el("div", { class: "pagebar" }, [
+    el("a", { class: "idea__back", href }, [
+      el("span", { class: "idea__backico", "aria-hidden": "true" }, [uiIcon("back")]),
+      el("span", { text: label }),
+    ]),
+    edition && el("p", { class: "idea__edition", text: edition }),
+  ]);
+}
+
 export function momentumLevel(value) {
   if (value >= 0.7) return 3;
   if (value >= 0.45) return 2;

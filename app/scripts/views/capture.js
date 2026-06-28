@@ -6,6 +6,7 @@ import { el, slugify } from "../ui/dom.js";
 import { copyText } from "../ui/overlays.js";
 import { portalMark } from "../ui/portals.js";
 import { uiIcon } from "../ui/icons.js";
+import { pageBar } from "../ui/card.js";
 
 export function captureView(config) {
   const state = { topics: new Set(), portals: new Set() };
@@ -76,11 +77,8 @@ export function captureView(config) {
   );
 
   return el("div", { class: "container" }, [
+    pageBar("Capture"),
     el("div", { class: "idea__top enter", style: { "--i": 0 } }, [
-      el("a", { class: "backlink", href: "#/" }, [
-        uiIcon("back"),
-        "All ideas",
-      ]),
       el("h1", { class: "idea__title", text: "Capture a curiosity" }),
       el("p", {
         class: "idea__lede",

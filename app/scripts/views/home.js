@@ -51,13 +51,13 @@ function masthead(count) {
     }),
     el("p", { class: "masthead__edition", text: `${today} · ${tally}` }),
     el("div", { class: "masthead__actions" }, [
-      el("a", { class: "btn btn--accent btn--icon", href: "#/capture" }, [
-        el("span", { class: "btn__glyph", "aria-hidden": "true" }, [uiIcon("plus")]),
-        "Capture",
-      ]),
-      el("button", { class: "btn btn--ghost btn--icon", onClick: () => copyPublishPrompt() }, [
+      el("button", { class: "btn btn--accent btn--icon", onClick: () => copyPublishPrompt() }, [
         el("span", { class: "btn__glyph", "aria-hidden": "true" }, [uiIcon("upload")]),
         "Publish",
+      ]),
+      el("a", { class: "btn btn--ghost btn--icon", href: "#/capture" }, [
+        el("span", { class: "btn__glyph", "aria-hidden": "true" }, [uiIcon("plus")]),
+        "Capture",
       ]),
     ]),
   ]);

@@ -145,21 +145,23 @@ body {
   width: 100%;
   height: 100%;
 }
-.sidenav__link--capture {
+.sidenav__link--publish {
   margin-top: var(--s-4);
   background: var(--ink);
   border-color: var(--ink);
   color: var(--bg);
 }
-.sidenav__link--capture .sidenav__ico {
+.sidenav__link--publish .sidenav__ico {
   color: var(--bg);
 }
-.sidenav__link--capture:hover {
-  color: var(--bg);
-  background: var(--accent);
-  border-color: var(--accent);
-  box-shadow: 4px 4px 0 0 var(--ink);
-  transform: translate(-2px, -2px);
+@media (hover: hover) {
+  .sidenav__link--publish:hover {
+    color: var(--bg);
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 4px 4px 0 0 var(--ink);
+    transform: translate(-2px, -2px);
+  }
 }
 
 /* Phone: the rail becomes a fixed bottom bar with a raised Capture button. */
@@ -216,19 +218,19 @@ body {
     width: 1.4rem;
     height: 1.4rem;
   }
-  .sidenav__link--capture {
+  .sidenav__link--publish {
     margin-top: 0;
     background: transparent;
     border: none;
     color: var(--ink-soft);
   }
-  .sidenav__link--capture:hover {
+  .sidenav__link--publish:hover {
     background: transparent;
     border: none;
     box-shadow: none;
     transform: none;
   }
-  .sidenav__link--capture .sidenav__ico {
+  .sidenav__link--publish .sidenav__ico {
     color: var(--accent);
   }
 }
@@ -301,11 +303,6 @@ body {
   transition-duration: var(--dur-fast);
   transition-timing-function: var(--ease);
 }
-.btn:hover {
-  text-decoration: none;
-  background: var(--ink);
-  color: var(--bg);
-}
 .btn:active {
   transform: translate(1px, 1px);
 }
@@ -313,16 +310,25 @@ body {
   background: var(--ink);
   color: var(--bg);
 }
-.btn--accent:hover {
-  background: var(--bg);
-  color: var(--ink);
-}
 .btn--ghost {
   background: transparent;
 }
-.btn--ghost:hover {
-  background: var(--ink);
-  color: var(--bg);
+/* Hover inverts colours — but only where a real pointer exists, so a tap on
+   touch (iPhone/iPad) doesn't leave the button stuck in its inverted state. */
+@media (hover: hover) {
+  .btn:hover {
+    text-decoration: none;
+    background: var(--ink);
+    color: var(--bg);
+  }
+  .btn--accent:hover {
+    background: var(--bg);
+    color: var(--ink);
+  }
+  .btn--ghost:hover {
+    background: var(--ink);
+    color: var(--bg);
+  }
 }
 .btn--block {
   display: flex;
@@ -1655,6 +1661,16 @@ body {
   color: var(--accent);
   text-decoration: none;
 }
+/* Shared page header bar (Library, Capture): the same bordered back cell +
+   mono edition label as the Idea page's editorial bar, so the back control is
+   consistent across screens and reads as one merged header strip. */
+.pagebar {
+  display: flex;
+  align-items: stretch;
+  min-height: var(--idea-bar-h);
+  margin-bottom: var(--s-5);
+  border-bottom: 1px solid var(--ink);
+}
 .idea__title {
   font-size: var(--t-h1);
 }
@@ -2148,7 +2164,6 @@ body {
   background: var(--ink);
   color: var(--bg);
   font-size: var(--t-small);
-  box-shadow: var(--shadow-pop);
   animation: toast-in var(--dur) var(--ease-out) both;
 }
 
