@@ -1,0 +1,14 @@
+{
+  "connections": [
+    {
+      "to": "passive-life-analytics",
+      "relation": "Both resist the impulse to act immediately — one delays the build, the other delays the tracking. The discipline is identical: understand what's already there before adding more.",
+      "concepts": ["restraint before action", "problem space first"]
+    },
+    {
+      "to": "behavioral-security-training",
+      "relation": "Both challenge a reflex — the engineer's urge to build, and the click that happens before the brain catches up. The answer in both cases is pause, not speed.",
+      "concepts": ["behavior over reflex", "deliberate pause"]
+    }
+  ]
+}

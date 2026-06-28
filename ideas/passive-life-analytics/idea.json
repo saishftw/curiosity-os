@@ -2,9 +2,9 @@
   "id": "passive-life-analytics",
   "title": "Passive Life Analytics",
   "slug": "passive-life-analytics",
-  "created": "2026-06-09",
-  "topics": ["productivity", "ai", "health"],
-  "status": "researching",
+  "created": "2026-06-28",
+  "topics": ["productivity", "psychology", "ai", "health"],
+  "status": "exploring",
   "emblem": "pulse",
-  "source": "A late-night thought: my phone already knows almost everything"
+  "source": "Realising that most daily behaviour is already being captured — Screen Time, calendars, location history, dev tools — without any new effort"
 }

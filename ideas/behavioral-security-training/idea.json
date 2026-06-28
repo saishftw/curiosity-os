@@ -1,10 +1,10 @@
 {
   "id": "behavioral-security-training",
-  "title": "Behavioral Security Training",
+  "title": "Behavioural Cybersecurity Training",
   "slug": "behavioral-security-training",
-  "created": "2025-11-10",
-  "topics": ["cybersecurity", "psychology", "learning", "design"],
-  "status": "paused",
+  "created": "2026-06-28",
+  "topics": ["cybersecurity", "learning", "psychology", "business"],
+  "status": "exploring",
   "emblem": "shield",
-  "source": "Sat through another compliance module and forgot it by lunch"
+  "source": "Recognising that passive compliance training doesn't change behaviour — and wondering if behavioural science can"
 }

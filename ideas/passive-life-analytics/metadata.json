@@ -1,11 +1,11 @@
 {
-  "momentum": 0.5,
-  "interest": 0.78,
-  "confidence": 0.25,
-  "novelty": 0.92,
-  "evidence": 0.2,
-  "activity": "researching",
-  "lastActive": "2026-06-26",
-  "counts": { "sessions": 2, "publishes": 2, "connections": 2, "openLoops": 4 },
+  "momentum": 0.1,
+  "interest": 0.8,
+  "confidence": 0.2,
+  "novelty": 0.9,
+  "evidence": 0.0,
+  "activity": "exploring",
+  "lastActive": "2026-06-28",
+  "counts": { "sessions": 0, "publishes": 0, "connections": 3, "openLoops": 4 },
   "signals": { "interestingAgain": false, "unfinished": false, "readyToBuild": false }
 }
