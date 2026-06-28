@@ -284,6 +284,27 @@ body {
     letter-spacing: -0.02em;
     text-transform: uppercase;
   }
+  .topbar__search {
+    display: inline-grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-left: auto;
+    color: var(--ink);
+    transition: color var(--dur-fast) var(--ease),
+      transform var(--dur-fast) var(--ease);
+  }
+  .topbar__search svg {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  .topbar__search:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .topbar__search:active {
+    transform: scale(0.96);
+  }
 }
 
 /* — Buttons ---------------------------------------------------------------- */
@@ -848,6 +869,7 @@ body {
   min-height: var(--idea-bar-h);
   background: var(--bg);
   border-bottom: 1px solid var(--ink);
+  border-top: 1px solid var(--ink);
 }
 .idea__back {
   display: inline-flex;
@@ -880,10 +902,15 @@ body {
   height: 100%;
 }
 .idea__edition {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: calc(100% - 26rem);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
   font-family: var(--font-mono);
   font-size: var(--t-micro);
   letter-spacing: 0.1em;
@@ -901,7 +928,8 @@ body {
   display: none;
 }
 @media (max-width: 56rem) {
-  body:has(.idea) .topbar {
+  body:has(.idea) .topbar,
+  body:has(.pagebar) .topbar {
     display: none;
   }
   .idea__brand {
@@ -917,11 +945,13 @@ body {
     height: 1.3rem;
   }
   .topbar,
-  .idea__bar {
+  .idea__bar,
+  .pagebar {
     transition: transform var(--dur) var(--ease);
   }
   .topbar.is-hidden,
-  .idea__bar.is-hidden {
+  .idea__bar.is-hidden,
+  .pagebar.is-hidden {
     transform: translateY(-100%);
   }
 }
@@ -1692,11 +1722,17 @@ body {
    mono edition label as the Idea page's editorial bar, so the back control is
    consistent across screens and reads as one merged header strip. */
 .pagebar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   display: flex;
   align-items: stretch;
   min-height: var(--idea-bar-h);
   margin-bottom: var(--s-5);
+  background: var(--bg);
   border-bottom: 1px solid var(--ink);
+  border-top: 1px solid var(--ink);
+
 }
 .idea__title {
   font-size: var(--t-h1);
@@ -2432,6 +2468,68 @@ body {
   margin-bottom: var(--s-2);
 }
 
+/* — Library: search ------------------------------------------------------- */
+.search {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+  padding-bottom: var(--s-2);
+  border-bottom: 1px solid var(--ink);
+}
+.search__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: none;
+  color: var(--ink-faint);
+  transition: color var(--dur-fast) var(--ease);
+}
+.search__icon svg {
+  width: 100%;
+  height: 100%;
+}
+.search__input {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: var(--t-small);
+  letter-spacing: 0.01em;
+}
+.search__input::placeholder {
+  color: var(--ink-faint);
+}
+.search__input:focus {
+  outline: none;
+}
+.search:focus-within {
+  border-color: var(--accent);
+}
+.search:focus-within .search__icon {
+  color: var(--accent);
+}
+.search__empty {
+  padding-block: var(--s-6);
+}
+.search__hint {
+  margin-top: var(--s-2);
+  color: var(--ink-faint);
+  font-size: var(--t-small);
+}
+.entry__matched {
+  margin-top: var(--s-2);
+  font-family: var(--font-mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
 /* — Browse: lens switcher -------------------------------------------------- */
 .segmented {
   display: inline-flex;
@@ -2458,6 +2556,10 @@ body {
 .segmented__btn[aria-selected="true"] {
   background: var(--ink);
   color: var(--bg);
+}
+/* An explicit display on .segmented overrides the UA [hidden] rule, so restore it. */
+.segmented[hidden] {
+  display: none;
 }
 .browse__panel {
   margin-top: var(--s-5);

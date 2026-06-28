@@ -4,6 +4,7 @@
 import { el, clear, daysBetween } from "../ui/dom.js";
 import { ideaEntry, pageBar } from "../ui/card.js";
 import { uiIcon } from "../ui/icons.js";
+import { searchIdeas } from "../search.js";
 
 const VIEW_ICONS = {
   "interesting-again": "flame",
@@ -27,11 +28,6 @@ export function browseView({ config, index }) {
   const root = el("div", { class: "container--page browse" });
 
   root.appendChild(pageBar("The Library"));
-  root.appendChild(
-    el("div", { class: "masthead enter", style: { "--i": 0 } }, [
-      el("h1", { class: "masthead__title", text: "Browse everything" }),
-    ])
-  );
 
   const lenses = [
     { id: "feeling", label: "By feeling" },
@@ -39,12 +35,68 @@ export function browseView({ config, index }) {
     { id: "activity", label: "By activity" },
   ];
   let current = "feeling";
+  let query = "";
 
-  const panel = el("div", { class: "browse__panel" });
-  const render = () => {
+  const panel = el("div", { class: "browse__panel", id: "browse-panel" });
+  const status = el("p", {
+    class: "visually-hidden",
+    role: "status",
+    "aria-live": "polite",
+  });
+
+  const renderLenses = () => {
     clear(panel);
     panel.appendChild(renderLens(current, ideas, config, index));
   };
+
+  const renderResults = () => {
+    clear(panel);
+    const results = searchIdeas(ideas, query, config);
+    status.textContent = `${results.length} ${
+      results.length === 1 ? "result" : "results"
+    } for “${query}”`;
+    if (!results.length) {
+      panel.appendChild(
+        el("div", { class: "search__empty enter" }, [
+          el("p", { class: "empty__sub", text: `Nothing matches “${query}” yet.` }),
+          el("p", {
+            class: "search__hint",
+            text: "Try a topic, a feeling, or a word from a last insight.",
+          }),
+        ])
+      );
+      return;
+    }
+    panel.appendChild(
+      band(
+        {
+          icon: "search",
+          label: "Results",
+          blurb: `${results.length} ${results.length === 1 ? "curiosity" : "curiosities"}`,
+        },
+        results.map((result, i) =>
+          ideaEntry(result.entry, config, i, {
+            note: result.matchedLabel && `Matched in ${result.matchedLabel}`,
+          })
+        ),
+        0
+      )
+    );
+  };
+
+  const searchInput = el("input", {
+    type: "search",
+    id: "library-search",
+    class: "search__input",
+    placeholder: "Search your curiosities…",
+    autocomplete: "off",
+    "aria-label": "Search your curiosities",
+    "aria-controls": "browse-panel",
+  });
+  const searchField = el("div", { class: "search enter", style: { "--i": 0 } }, [
+    el("span", { class: "search__icon", "aria-hidden": "true" }, [uiIcon("search")]),
+    searchInput,
+  ]);
 
   const switcher = el(
     "div",
@@ -61,15 +113,42 @@ export function browseView({ config, index }) {
           [...switcher.children].forEach((button, i) =>
             button.setAttribute("aria-selected", String(lenses[i].id === current))
           );
-          render();
+          renderLenses();
         },
       })
     )
   );
 
+  const applyQuery = (value) => {
+    query = value.trim();
+    if (query) {
+      switcher.hidden = true;
+      renderResults();
+    } else {
+      switcher.hidden = false;
+      status.textContent = "";
+      renderLenses();
+    }
+  };
+
+  let debounce;
+  searchInput.addEventListener("input", () => {
+    clearTimeout(debounce);
+    debounce = setTimeout(() => applyQuery(searchInput.value), 120);
+  });
+  searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && searchInput.value) {
+      event.preventDefault();
+      searchInput.value = "";
+      applyQuery("");
+    }
+  });
+
+  root.appendChild(searchField);
+  root.appendChild(status);
   root.appendChild(switcher);
   root.appendChild(panel);
-  render();
+  renderLenses();
   return root;
 }
 

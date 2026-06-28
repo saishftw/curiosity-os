@@ -14,6 +14,7 @@ import { uiIcon } from "./ui/icons.js";
 
 const main = document.getElementById("main");
 let renderToken = 0;
+let pendingSearchFocus = false;
 
 async function render(route) {
   const token = ++renderToken;
@@ -32,7 +33,14 @@ async function render(route) {
     clear(main);
     main.appendChild(node);
     document.title = titleFor(route);
-    main.focus({ preventScroll: true });
+    // The Home search icon asks the next view to focus the Library search; only
+    // the render that actually mounts (past the token checks) consumes it.
+    let focusTarget = main;
+    if (pendingSearchFocus) {
+      pendingSearchFocus = false;
+      focusTarget = node.querySelector?.(".search__input") || main;
+    }
+    focusTarget.focus({ preventScroll: true });
     window.scrollTo(0, 0);
   } catch (error) {
     if (token !== renderToken) return;
@@ -102,7 +110,7 @@ function setupAutoHideBars() {
   let ticking = false;
   const update = () => {
     const y = window.scrollY || 0;
-    const bars = document.querySelectorAll(".topbar, .idea__bar");
+    const bars = document.querySelectorAll(".topbar, .idea__bar, .pagebar");
     if (y < 64) bars.forEach((b) => b.classList.remove("is-hidden"));
     else if (y > lastY + 6) bars.forEach((b) => b.classList.add("is-hidden"));
     else if (y < lastY - 6) bars.forEach((b) => b.classList.remove("is-hidden"));
@@ -129,6 +137,11 @@ document.addEventListener("click", (event) => {
   if (!trigger) return;
   event.preventDefault();
   copyPublishPrompt();
+});
+
+// The Home top-bar search icon jumps to the Library with the search focused.
+document.addEventListener("click", (event) => {
+  if (event.target.closest("[data-action='search']")) pendingSearchFocus = true;
 });
 
 startRouter(render);

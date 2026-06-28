@@ -44,10 +44,10 @@ function masthead(count) {
   });
   const tally = `${count} ${count === 1 ? "curiosity" : "curiosities"} in the collection`;
   return el("div", { class: "masthead enter", style: { "--i": 0 } }, [
-    el("p", { class: "masthead__eyebrow", text: "Your library of curiosities" }),
+    el("p", { class: "masthead__eyebrow", text: "A library of curiosities" }),
     el("h1", {
       class: "masthead__title",
-      text: "What has been on your mind lately?",
+      text: "Currently Exploring",
     }),
     el("p", { class: "masthead__edition", text: `${today} · ${tally}` }),
     el("div", { class: "masthead__actions" }, [
@@ -223,7 +223,7 @@ function pickFrontPage(ideas) {
 
 function frontPage({ featured, archive, pick }) {
   const rail = [
-    archive && railCard(archive, "From the archives", "history"),
+    archive && railCard(archive, "Worth revisiting", "history"),
     pick && pickCard(pick),
   ].filter(Boolean);
   return el(
@@ -242,7 +242,7 @@ function frontPage({ featured, archive, pick }) {
 function leadCard(idea) {
   const insight = idea.lastInsight || idea.summary;
   return el("a", { class: "frontpage__lead", href: `#/idea/${idea.slug}` }, [
-    el("div", { class: "frontpage__kicker" }, [badge("Front page feature", "feature")]),
+    el("div", { class: "frontpage__kicker" }, [badge("Top of mind", "feature")]),
     el("h2", { class: "frontpage__headline", text: idea.title }),
     el("hr", { class: "frontpage__rule" }),
     el("div", { class: "frontpage__meta" }, [
@@ -273,7 +273,7 @@ function pickCard(idea) {
   return el("a", { class: "frontpage__pick", href: `#/idea/${idea.slug}` }, [
     el("p", { class: "frontpage__pickkicker" }, [
       el("span", { class: "frontpage__railicon", "aria-hidden": "true" }, [uiIcon("spark")]),
-      "Editorial pick",
+      "The Librarian's pick",
     ]),
     el("h3", { class: "frontpage__railhead", text: idea.title }),
     el("p", { class: "frontpage__railbody", text: idea.summary }),

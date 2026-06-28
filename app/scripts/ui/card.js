@@ -11,6 +11,9 @@ import { uiIcon } from "./icons.js";
 // back control looks identical across the Library, Capture, and Idea screens.
 export function pageBar(edition, { href = "#/", label = "Home" } = {}) {
   return el("div", { class: "pagebar" }, [
+    el("a", { class: "idea__brand", href: "#/", "aria-label": "Curiosity OS — home" }, [
+      uiIcon("spark"),
+    ]),
     el("a", { class: "idea__back", href }, [
       el("span", { class: "idea__backico", "aria-hidden": "true" }, [uiIcon("back")]),
       el("span", { text: label }),
@@ -93,6 +96,7 @@ export function ideaEntry(entry, config, position = 0, opts = {}) {
           class: `entry__insight${intentLead ? " entry__insight--intent" : ""}`,
           text: lead,
         }),
+      opts.note && el("p", { class: "entry__matched", text: opts.note }),
       el("div", { class: "entry__more" }, [
         el("div", { class: "entry__more-inner" }, [
           revealText &&
