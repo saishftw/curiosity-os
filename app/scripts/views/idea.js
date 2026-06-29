@@ -563,7 +563,7 @@ function continueIn(entry, data, config) {
               el("span", { class: "picker__name", text: portal.name }),
               el("span", {
                 class: "picker__cta",
-                text: href ? "Copy & open ↗" : "Copy",
+                text: href ? "Copy & open \u2197\uFE0E" : "Copy",
               }),
             ]
           )

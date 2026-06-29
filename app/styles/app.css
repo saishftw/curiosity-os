@@ -2333,7 +2333,7 @@ body {
   font-weight: 600;
 }
 .connection__title::before {
-  content: "↔ ";
+  content: "\2194\FE0E ";
   color: var(--accent);
 }
 .connection__why {
@@ -2401,7 +2401,9 @@ body {
   margin-top: var(--s-7);
 }
 .home__browse::before {
-  content: "\2733 \2733 \2733";
+  /* \FE0E forces text (not emoji) presentation so the asterisks stay monochrome
+     ink on mobile instead of rendering as colored system emoji. */
+  content: "\2733\FE0E \2733\FE0E \2733\FE0E";
   align-self: stretch;
   text-align: center;
   padding-top: var(--s-6);

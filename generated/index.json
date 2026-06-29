@@ -2,39 +2,6 @@
   "generatedAt": "2026-06-27",
   "ideas": [
     {
-      "id": "ai-cost-optimizer",
-      "slug": "ai-cost-optimizer",
-      "title": "AI Cost Optimizer",
-      "summary": "Quietly removes wasted LLM spend — without changing the model or what a prompt means.",
-      "intent": "Prototype the token-usage analyzer against one week of real Claude logs.",
-      "lastInsight": "Most overspend isn't model choice — it's redundant context re-sent on every turn.",
-      "topics": ["ai", "startups", "systems"],
-      "activity": "building",
-      "emblem": "coins",
-      "created": "2026-04-02",
-      "updated": "2026-06-24",
-      "portalIds": ["claude", "github-copilot", "cursor", "github"],
-      "metadata": {
-        "momentum": 0.86,
-        "interest": 0.8,
-        "confidence": 0.55,
-        "novelty": 0.4,
-        "evidence": 0.6,
-        "counts": { "sessions": 6, "publishes": 6, "connections": 3, "openLoops": 2 }
-      },
-      "signals": { "interestingAgain": false, "unfinished": false, "readyToBuild": true },
-      "knowledge": [
-        { "file": "architecture.md", "title": "Architecture" },
-        { "file": "market.md", "title": "Market" }
-      ],
-      "sessions": [
-        { "file": "2026-06-18-claude.md", "date": "2026-06-18", "portalId": "claude" }
-      ],
-      "connections": [
-        { "to": "passive-life-analytics", "relation": "Both get value from data that already exists instead of generating more — usage telemetry here, personal signals there.", "concepts": ["synthesis over collection", "what already exists"] }
-      ]
-    },
-    {
       "id": "behavioral-security-training",
       "slug": "behavioral-security-training",
       "title": "Behavioral Security Training",
@@ -86,7 +53,7 @@
         "confidence": 0.25,
         "novelty": 0.92,
         "evidence": 0.2,
-        "counts": { "sessions": 2, "publishes": 2, "connections": 2, "openLoops": 4 }
+        "counts": { "sessions": 2, "publishes": 2, "connections": 1, "openLoops": 4 }
       },
       "signals": { "interestingAgain": false, "unfinished": false, "readyToBuild": false },
       "knowledge": [
@@ -97,8 +64,7 @@
         { "file": "2026-06-26-chatgpt.md", "date": "2026-06-26", "portalId": "chatgpt" }
       ],
       "connections": [
-        { "to": "behavioral-security-training", "relation": "Both believe change happens in the moment, and that quiet, well-timed cues beat dashboards.", "concepts": ["moment of action", "gentle nudges"] },
-        { "to": "ai-cost-optimizer", "relation": "Both extract meaning from data you already produce instead of asking for more input.", "concepts": ["synthesis over collection", "what already exists"] }
+        { "to": "behavioral-security-training", "relation": "Both believe change happens in the moment, and that quiet, well-timed cues beat dashboards.", "concepts": ["moment of action", "gentle nudges"] }
       ]
     }
   ]

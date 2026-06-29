@@ -1,6 +1,0 @@
-{
-  "portalIds": ["claude", "github-copilot", "cursor", "github"],
-  "links": [
-    { "portalId": "github", "label": "prototype repo", "url": "https://example.com/ai-cost-optimizer" }
-  ]
-}
