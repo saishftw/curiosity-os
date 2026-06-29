@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27",
+  "generatedAt": "2026-06-29",
   "ideas": [
     {
       "id": "behavioral-security-training",
@@ -66,6 +66,36 @@
       "connections": [
         { "to": "behavioral-security-training", "relation": "Both believe change happens in the moment, and that quiet, well-timed cues beat dashboards.", "concepts": ["moment of action", "gentle nudges"] }
       ]
+    },
+    {
+      "id": "systems-thinking",
+      "slug": "systems-thinking",
+      "title": "Systems Thinking",
+      "summary": "Every engineered system is a transformation of inputs into outputs under constraints — mastering that structure transfers across any domain.",
+      "intent": "Develop domain-independent systems thinking that transfers across software, logistics, manufacturing, healthcare, and other industries. Start by studying one unfamiliar industry each week using the same framework.",
+      "lastInsight": "Every engineered system can be understood as a transformation of inputs into outputs under constraints; mastering systems thinking means recognizing that structure regardless of domain.",
+      "topics": ["systems", "learning", "business"],
+      "activity": "exploring",
+      "emblem": "network",
+      "created": "2026-06-29",
+      "updated": "2026-06-29",
+      "portalIds": ["chatgpt"],
+      "metadata": {
+        "momentum": 0.75,
+        "interest": 0.90,
+        "confidence": 0.55,
+        "novelty": 0.80,
+        "evidence": 0.30,
+        "counts": { "sessions": 1, "publishes": 1, "connections": 0, "openLoops": 5 }
+      },
+      "signals": { "interestingAgain": false, "unfinished": true, "readyToBuild": false },
+      "knowledge": [
+        { "file": "systems-and-processes.md", "title": "Systems and processes" }
+      ],
+      "sessions": [
+        { "file": "2026-06-29-chatgpt.md", "date": "2026-06-29", "portalId": "chatgpt" }
+      ],
+      "connections": []
     }
   ]
 }
