@@ -2,39 +2,6 @@
   "generatedAt": "2026-06-28",
   "ideas": [
     {
-      "id": "ai-cost-optimizer",
-      "slug": "ai-cost-optimizer",
-      "title": "AI Cost Optimizer",
-      "summary": "Quietly removes wasted LLM spend — without changing the model or what a prompt means.",
-      "intent": "Prototype the token-usage analyzer against one week of real Claude logs.",
-      "lastInsight": "Most overspend isn't model choice — it's redundant context re-sent on every turn.",
-      "topics": ["ai", "startups", "systems"],
-      "activity": "building",
-      "emblem": "coins",
-      "created": "2026-04-02",
-      "updated": "2026-06-24",
-      "portalIds": ["claude", "github-copilot", "cursor", "github"],
-      "metadata": {
-        "momentum": 0.86,
-        "interest": 0.8,
-        "confidence": 0.55,
-        "novelty": 0.4,
-        "evidence": 0.6,
-        "counts": { "sessions": 6, "publishes": 6, "connections": 3, "openLoops": 2 }
-      },
-      "signals": { "interestingAgain": false, "unfinished": false, "readyToBuild": true },
-      "knowledge": [
-        { "file": "architecture.md", "title": "Architecture" },
-        { "file": "market.md", "title": "Market" }
-      ],
-      "sessions": [
-        { "file": "2026-06-18-claude.md", "date": "2026-06-18", "portalId": "claude" }
-      ],
-      "connections": [
-        { "to": "passive-life-analytics", "relation": "Both get value from data that already exists instead of generating more — usage telemetry here, personal signals there.", "concepts": ["synthesis over collection", "what already exists"] }
-      ]
-    },
-    {
       "id": "behavioral-security-training",
       "slug": "behavioral-security-training",
       "title": "Behavioural Cybersecurity Training",
@@ -82,15 +49,14 @@
         "confidence": 0.2,
         "novelty": 0.9,
         "evidence": 0.0,
-        "counts": { "sessions": 0, "publishes": 0, "connections": 3, "openLoops": 4 }
+        "counts": { "sessions": 0, "publishes": 0, "connections": 2, "openLoops": 4 }
       },
       "signals": { "interestingAgain": false, "unfinished": false, "readyToBuild": false },
       "knowledge": [],
       "sessions": [],
       "connections": [
         { "to": "thinking-before-building", "relation": "Both resist the impulse to act immediately — one delays the build, the other delays the tracking. The discipline is identical: understand what's already there before adding more.", "concepts": ["restraint before action", "problem space first"] },
-        { "to": "behavioral-security-training", "relation": "Both believe that better outcomes come from gentle, well-timed cues — not more dashboards, not more training videos, not more data to log.", "concepts": ["moment of action", "gentle nudges"] },
-        { "to": "ai-cost-optimizer", "relation": "Both extract meaning from data you already produce instead of asking for more input — usage telemetry there, personal signals here.", "concepts": ["synthesis over collection", "what already exists"] }
+        { "to": "behavioral-security-training", "relation": "Both believe that better outcomes come from gentle, well-timed cues — not more dashboards, not more training videos, not more data to log.", "concepts": ["moment of action", "gentle nudges"] }
       ]
     },
     {
@@ -124,4 +90,3 @@
     }
   ]
 }
-

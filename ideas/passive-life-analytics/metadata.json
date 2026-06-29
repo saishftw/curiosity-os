@@ -6,6 +6,6 @@
   "evidence": 0.0,
   "activity": "exploring",
   "lastActive": "2026-06-28",
-  "counts": { "sessions": 0, "publishes": 0, "connections": 3, "openLoops": 4 },
+  "counts": { "sessions": 0, "publishes": 0, "connections": 2, "openLoops": 4 },
   "signals": { "interestingAgain": false, "unfinished": false, "readyToBuild": false }
 }

@@ -1,9 +1,0 @@
-{
-  "connections": [
-    {
-      "to": "passive-life-analytics",
-      "relation": "Both get value from data that already exists instead of generating more — usage telemetry here, personal signals there.",
-      "concepts": ["synthesis over collection", "what already exists"]
-    }
-  ]
-}

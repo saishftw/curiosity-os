@@ -9,11 +9,6 @@
       "to": "behavioral-security-training",
       "relation": "Both believe that better outcomes come from gentle, well-timed cues — not more dashboards, not more training videos, not more data to log.",
       "concepts": ["moment of action", "gentle nudges"]
-    },
-    {
-      "to": "ai-cost-optimizer",
-      "relation": "Both extract meaning from data you already produce instead of asking for more input — usage telemetry there, personal signals here.",
-      "concepts": ["synthesis over collection", "what already exists"]
     }
   ]
 }
