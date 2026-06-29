@@ -1,0 +1,10 @@
+{
+  "id": "thinking-before-building",
+  "title": "Thinking Before Building",
+  "slug": "thinking-before-building",
+  "created": "2026-06-28",
+  "topics": ["design", "systems"],
+  "status": "exploring",
+  "emblem": "compass",
+  "source": "Noticing the impulse to jump straight to architecture before deeply understanding the problem"
+}

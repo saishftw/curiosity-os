@@ -1,9 +1,14 @@
 {
   "connections": [
     {
+      "to": "thinking-before-building",
+      "relation": "Both challenge a reflex — the engineer's urge to build, and the click that happens before the brain catches up. The answer in both cases is pause, not speed.",
+      "concepts": ["behavior over reflex", "deliberate pause"]
+    },
+    {
       "to": "passive-life-analytics",
-      "relation": "Both act in the moment it matters — a risky click in one, a daily signal in the other — not after the fact.",
-      "concepts": ["moment of action", "behavior over knowledge"]
+      "relation": "Both believe that better outcomes come from gentle, well-timed cues — not more dashboards, not more training videos, not more data to log.",
+      "concepts": ["moment of action", "gentle nudges"]
     }
   ]
 }

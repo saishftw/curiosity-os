@@ -1,11 +1,11 @@
 {
   "momentum": 0.1,
-  "interest": 0.75,
+  "interest": 0.7,
   "confidence": 0.2,
   "novelty": 0.85,
   "evidence": 0.0,
   "activity": "exploring",
   "lastActive": "2026-06-28",
-  "counts": { "sessions": 0, "publishes": 0, "connections": 2, "openLoops": 4 },
+  "counts": { "sessions": 0, "publishes": 0, "connections": 2, "openLoops": 3 },
   "signals": { "interestingAgain": false, "unfinished": false, "readyToBuild": false }
 }

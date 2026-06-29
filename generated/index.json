@@ -1,70 +1,91 @@
 {
-  "generatedAt": "2026-06-27",
+  "generatedAt": "2026-06-28",
   "ideas": [
     {
       "id": "behavioral-security-training",
       "slug": "behavioral-security-training",
-      "title": "Behavioral Security Training",
-      "summary": "Security that changes behavior at the moment of risk, not a yearly video you forget.",
-      "intent": "Sketch one micro-moment intervention that interrupts a risky click in real time.",
-      "lastInsight": "Compliance training is passive; behavior change needs friction at the moment of risk.",
-      "topics": ["cybersecurity", "psychology", "learning", "design"],
-      "activity": "paused",
+      "title": "Behavioural Cybersecurity Training",
+      "summary": "Replace compliance checkboxes with behavioural science — simulations, gamified learning, and micro-moments that build lasting security habits.",
+      "intent": "Understand the current enterprise cybersecurity training landscape, identify its shortcomings, and investigate how behavioural science and AI can improve human resilience against social engineering attacks.",
+      "lastInsight": "Compliance training teaches knowledge. But risky behaviour happens in half a second of habit. Knowledge doesn't reach that moment.",
+      "topics": ["cybersecurity", "learning", "psychology", "business"],
+      "activity": "exploring",
       "emblem": "shield",
-      "created": "2025-11-10",
-      "updated": "2026-06-21",
-      "portalIds": ["chatgpt", "claude", "perplexity"],
+      "created": "2026-06-28",
+      "updated": "2026-06-28",
+      "portalIds": [],
       "metadata": {
-        "momentum": 0.35,
-        "interest": 0.82,
-        "confidence": 0.4,
-        "novelty": 0.65,
-        "evidence": 0.45,
-        "counts": { "sessions": 4, "publishes": 4, "connections": 5, "openLoops": 3 }
+        "momentum": 0.1,
+        "interest": 0.75,
+        "confidence": 0.2,
+        "novelty": 0.85,
+        "evidence": 0.0,
+        "counts": { "sessions": 0, "publishes": 0, "connections": 2, "openLoops": 4 }
       },
-      "signals": { "interestingAgain": true, "unfinished": true, "readyToBuild": false },
-      "knowledge": [
-        { "file": "behavior-design.md", "title": "Behavior design" },
-        { "file": "connections.md", "title": "Connections" }
-      ],
-      "sessions": [
-        { "file": "2026-06-21-chatgpt.md", "date": "2026-06-21", "portalId": "chatgpt" }
-      ],
+      "signals": { "interestingAgain": false, "unfinished": false, "readyToBuild": false },
+      "knowledge": [],
+      "sessions": [],
       "connections": [
-        { "to": "passive-life-analytics", "relation": "Both act in the moment it matters — a risky click in one, a daily signal in the other — not after the fact.", "concepts": ["moment of action", "behavior over knowledge"] }
+        { "to": "thinking-before-building", "relation": "Both challenge a reflex — the engineer's urge to build, and the click that happens before the brain catches up. The answer in both cases is pause, not speed.", "concepts": ["behavior over reflex", "deliberate pause"] },
+        { "to": "passive-life-analytics", "relation": "Both believe that better outcomes come from gentle, well-timed cues — not more dashboards, not more training videos, not more data to log.", "concepts": ["moment of action", "gentle nudges"] }
       ]
     },
     {
       "id": "passive-life-analytics",
       "slug": "passive-life-analytics",
       "title": "Passive Life Analytics",
-      "summary": "Gentle reflection from the data your devices already collect. No new tracking.",
-      "intent": "List every signal my phone already records without any new hardware.",
-      "lastInsight": "The data already exists — the missing piece is gentle synthesis, not more tracking.",
-      "topics": ["productivity", "ai", "health"],
-      "activity": "researching",
+      "summary": "Turn the behavioural data your devices already collect into gentle, useful insight — without asking you to track one more thing.",
+      "intent": "Research existing behavioural datasets available on personal devices and explore how AI can transform passive signals into meaningful coaching without increasing user effort.",
+      "lastInsight": "The data already exists — Screen Time, calendars, location history, development tool activity. The opportunity is AI synthesis, not new collection.",
+      "topics": ["productivity", "psychology", "ai", "health"],
+      "activity": "exploring",
       "emblem": "pulse",
-      "created": "2026-06-09",
-      "updated": "2026-06-26",
-      "portalIds": ["chatgpt", "gemini", "notes"],
+      "created": "2026-06-28",
+      "updated": "2026-06-28",
+      "portalIds": [],
       "metadata": {
-        "momentum": 0.5,
-        "interest": 0.78,
-        "confidence": 0.25,
-        "novelty": 0.92,
-        "evidence": 0.2,
-        "counts": { "sessions": 2, "publishes": 2, "connections": 1, "openLoops": 4 }
+        "momentum": 0.1,
+        "interest": 0.8,
+        "confidence": 0.2,
+        "novelty": 0.9,
+        "evidence": 0.0,
+        "counts": { "sessions": 0, "publishes": 0, "connections": 2, "openLoops": 4 }
       },
       "signals": { "interestingAgain": false, "unfinished": false, "readyToBuild": false },
-      "knowledge": [
-        { "file": "signals.md", "title": "Signals already recorded" },
-        { "file": "principles.md", "title": "Principles" }
-      ],
-      "sessions": [
-        { "file": "2026-06-26-chatgpt.md", "date": "2026-06-26", "portalId": "chatgpt" }
-      ],
+      "knowledge": [],
+      "sessions": [],
       "connections": [
-        { "to": "behavioral-security-training", "relation": "Both believe change happens in the moment, and that quiet, well-timed cues beat dashboards.", "concepts": ["moment of action", "gentle nudges"] }
+        { "to": "thinking-before-building", "relation": "Both resist the impulse to act immediately — one delays the build, the other delays the tracking. The discipline is identical: understand what's already there before adding more.", "concepts": ["restraint before action", "problem space first"] },
+        { "to": "behavioral-security-training", "relation": "Both believe that better outcomes come from gentle, well-timed cues — not more dashboards, not more training videos, not more data to log.", "concepts": ["moment of action", "gentle nudges"] }
+      ]
+    },
+    {
+      "id": "thinking-before-building",
+      "slug": "thinking-before-building",
+      "title": "Thinking Before Building",
+      "summary": "A deliberate practice of staying in the problem space longer — separating product thinking from engineering thinking before any architecture is drawn.",
+      "intent": "Explore frameworks and mental models that help founders and engineers stay in the problem space longer before converging on implementation.",
+      "lastInsight": "The impulse to design systems is so strong that it crowds out the harder work of understanding what the system is actually for.",
+      "topics": ["design", "systems"],
+      "activity": "exploring",
+      "emblem": "compass",
+      "created": "2026-06-28",
+      "updated": "2026-06-28",
+      "portalIds": [],
+      "metadata": {
+        "momentum": 0.1,
+        "interest": 0.7,
+        "confidence": 0.2,
+        "novelty": 0.85,
+        "evidence": 0.0,
+        "counts": { "sessions": 0, "publishes": 0, "connections": 2, "openLoops": 3 }
+      },
+      "signals": { "interestingAgain": false, "unfinished": false, "readyToBuild": false },
+      "knowledge": [],
+      "sessions": [],
+      "connections": [
+        { "to": "passive-life-analytics", "relation": "Both resist the impulse to act immediately — one delays the build, the other delays the tracking. The discipline is identical: understand what's already there before adding more.", "concepts": ["restraint before action", "problem space first"] },
+        { "to": "behavioral-security-training", "relation": "Both challenge a reflex — the engineer's urge to build, and the click that happens before the brain catches up. The answer in both cases is pause, not speed.", "concepts": ["behavior over reflex", "deliberate pause"] }
       ]
     }
   ]
