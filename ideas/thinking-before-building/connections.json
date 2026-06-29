@@ -1,14 +1,14 @@
 {
   "connections": [
     {
-      "to": "thinking-before-building",
+      "to": "passive-life-analytics",
       "relation": "Both resist the impulse to act immediately — one delays the build, the other delays the tracking. The discipline is identical: understand what's already there before adding more.",
       "concepts": ["restraint before action", "problem space first"]
     },
     {
       "to": "behavioral-security-training",
-      "relation": "Both believe that better outcomes come from gentle, well-timed cues — not more dashboards, not more training videos, not more data to log.",
-      "concepts": ["moment of action", "gentle nudges"]
+      "relation": "Both challenge a reflex — the engineer's urge to build, and the click that happens before the brain catches up. The answer in both cases is pause, not speed.",
+      "concepts": ["behavior over reflex", "deliberate pause"]
     }
   ]
 }

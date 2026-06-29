@@ -1,16 +1,9 @@
 # Timeline
 
-## 2026-06-09 — Captured
+## 2026-06-28 — Captured
 
-A late-night thought: my phone already knows where I went, how I slept, who I talked
-to. What if it just... gently reflected that back?
-
-## 2026-06-18 — Named the real problem
-
-The missing piece isn't data collection — it's synthesis. We're drowning in signals
-and starving for meaning.
-
-## 2026-06-26 — Drew the trust line
-
-If this ever feels like surveillance, it's dead. Decided: local-first, reflection
-over measurement.
+Most of my daily behaviour is already being captured — Apple Screen Time, calendars,
+location history, development tools. Rather than asking users to manually track
+habits, the interesting question is whether AI can surface meaningful insights from
+what's already there, helping people manage their energy and spend their time more
+intentionally. Captured as an idea worth researching.

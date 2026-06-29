@@ -1,29 +1,23 @@
-# Behavioral Security Training
+# Behavioural Cybersecurity Training
 
-> Security training that changes behavior at the moment of risk — not a yearly video
-> you forget by lunch.
+> Replace compliance checkboxes with behavioural science — simulations, gamified learning, and micro-moments that build lasting security habits.
 
-**Right now:** Sketch one "micro-moment" intervention that interrupts a risky click
-in real time.
+**Right now:** Understand the current enterprise cybersecurity training landscape, identify its shortcomings, and investigate how behavioural science and AI can improve human resilience against social engineering attacks.
 
-**Last insight:** Compliance training is passive; behavior change needs friction at
-the moment of risk.
+**Last insight:** Compliance training teaches knowledge. But risky behaviour — clicking a phishing link, plugging in an unknown device — happens in half a second of habit. Knowledge doesn't reach that moment.
 
 ---
 
 ## Why this matters
 
-Most breaches start with a human action taken on autopilot. Annual compliance
-training teaches knowledge, but risky behavior happens in a half-second of habit.
-The leverage is in that half-second — not in a slideshow.
+The majority of enterprise security breaches involve a human action. Annual compliance training — passive videos, multiple-choice quizzes, completion certificates — has been the standard for decades. And it doesn't work.
+
+Behavioural psychology has shown that lasting habits are built through repetition, timely feedback, and cues at the moment of decision. Security training has almost none of this. The opportunity is to apply what we know about behaviour change to the most costly human failure mode in technology.
 
 ## Current understanding
 
-- Knowledge ≠ behavior. People _know_ not to click, and click anyway.
-- Behavior change needs a cue at the **moment of risk**, not months earlier.
-- This is really a habit-formation problem wearing a security costume.
+_Nothing curated yet. This fills in as you publish thinking._
 
 ## Key decisions
 
-- Treat this as behavior design first, security second.
-- Measure behavior (risky clicks avoided), never quiz scores.
+_None yet._

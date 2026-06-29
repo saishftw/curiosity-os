@@ -1,28 +1,23 @@
 # Passive Life Analytics
 
-> A quiet companion that turns the data your devices already collect into gentle
-> reflection — without asking you to track one more thing.
+> Turn the behavioural data your devices already collect into gentle, useful insight — without asking you to track one more thing.
 
-**Right now:** List every signal my phone already records without any new hardware.
+**Right now:** Research existing behavioural datasets available on personal devices and explore how AI can transform passive signals into meaningful coaching without increasing user effort.
 
-**Last insight:** The data already exists — the missing piece is gentle synthesis,
-not more tracking.
+**Last insight:** The data already exists — Screen Time, calendars, location history, development tool activity. The opportunity is AI synthesis, not new collection.
 
 ---
 
 ## Why this matters
 
-Every tracking app asks for more effort: log this, rate that, wear that. Most people
-quit. But our devices already hold a rich, passive trace of a life. The opportunity
-isn't more data — it's a kinder synthesis of what is already there.
+Most habit and wellness apps ask for effort: log this, rate that, wear that. Most people quit. But the devices we already carry hold a rich, passive trace of a life — where we went, what we worked on, who we talked to, how we slept.
+
+The question isn't how to collect more data. It's how to turn what already exists into something that helps people spend their time more intentionally, manage their energy better, and reflect without guilt.
 
 ## Current understanding
 
-- The bottleneck is **synthesis**, not collection.
-- Trust requires it to be **local-first** — reflection, not surveillance.
-- The right tone is a calm companion, not a dashboard of guilt.
+_Nothing curated yet. This fills in as you publish thinking._
 
 ## Key decisions
 
-- Local-first by default. Nothing leaves the device unless asked.
-- Optimize for one gentle weekly reflection, not real-time metrics.
+_None yet._
