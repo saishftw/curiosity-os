@@ -173,14 +173,67 @@ only to JSON; resolve them to human names when writing prose.
 
 ## 5. Recomputing metadata (derived — never hand-curated, except Intent)
 
-Signals are qualitative reads, normalized roughly to `0..1`. Use the Knowledge
-Delta's *Metadata Signals* and the Idea's history as evidence:
+Signals are qualitative reads, normalized roughly to `0..1`; they are not
+productivity scores. Use the Knowledge Delta's *Metadata Signals* and the Idea's
+repository history as evidence: `README.md`, `timeline.md`, `sessions/`,
+`knowledge/`, `open-loops.md`, `resources/`, `connections.json`, and factual
+counts. Prefer the user's own language over invented certainty.
 
-- **Momentum** — recent activity and forward motion (decays when paused).
-- **Interest** — how strongly it keeps pulling you back.
-- **Confidence** — how sure you are it's worth building.
-- **Novelty** — how fresh/unexplored the territory is.
-- **Evidence** — how much real proof now backs it.
+Use this scale consistently:
+
+- `0.0–0.2` — barely present / dormant / unsupported.
+- `0.3–0.5` — emerging, partial, or uneven.
+- `0.6–0.8` — clearly present and supported by recent material.
+- `0.9–1.0` — unusually strong; reserve for Ideas with repeated, explicit proof.
+
+Extract each scalar this way:
+
+- **Momentum** — how actively this Idea is evolving right now.
+  - Raise it for recent sessions, multiple timeline events in a short span,
+    concrete next movement, active building/research, closed open loops, or new
+    knowledge that changes the Idea's direction.
+  - Lower it when the Idea has not been touched recently, the latest session only
+    restates old material, intent is vague, or open loops accumulate without
+    movement.
+  - Do **not** confuse age with momentum: an old Idea can have high momentum if it
+    has clearly resumed.
+- **Interest** — how strongly the Idea still pulls the user back.
+  - Raise it for excited/curious language, repeated returns after gaps, vivid last
+    insights, fresh questions, surprising connections, or explicit statements that
+    the Idea feels alive.
+  - Lower it when the prose is perfunctory, the Idea is parked intentionally, or
+    the update is administrative rather than curiosity-driven.
+  - Interest can be high even when momentum is low: that means the Idea is
+    compelling but not currently moving.
+- **Confidence** — how certain the current understanding is.
+  - Raise it for validated assumptions, stable decisions, working prototypes,
+    coherent architecture, converging research, or evidence that narrows the next
+    step.
+  - Lower it for unresolved contradictions, invalidated assumptions, many
+    unanswered foundational questions, or a session that reveals the Idea is more
+    complex than previously believed.
+  - Lower confidence is not failure; it can mean the Librarian learned something
+    important and the Idea became more honest.
+- **Novelty** — how fresh, surprising, or unexplored the territory still is.
+  - Raise it for new concepts, unfamiliar domains, unexpected connections,
+    open-ended questions, exploratory language, or absence of settled structure.
+  - Lower it when the Idea has become mostly implementation, maintenance,
+    documentation, or refinement of known material.
+  - Novelty can decrease while evidence and confidence increase.
+- **Evidence** — how much support exists outside pure intuition.
+  - Raise it for prototypes, experiments, user/customer signals, research notes,
+    cited resources, data, architectural validation, market examples, or repeated
+    corroboration across sessions.
+  - Lower it when the Idea is mainly speculation, aspiration, aesthetic preference,
+    or a single unvalidated hunch.
+  - Evidence is about support, not excitement; do not raise it just because the
+    Idea feels interesting.
+
+When updating these values, compare against the previous `metadata.json` and move
+gradually unless the new session clearly changes the state. Record only the scalar
+values in JSON; do not expose scoring rationale in Markdown unless it is useful
+human context.
+
 - **activity** — one of `config/activities.json` (exploring, building, observing,
   paused, researching).
 - **counts** — sessions, publishes, connections, openLoops (factual tallies).
